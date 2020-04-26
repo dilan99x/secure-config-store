@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    #    url: jdbc:mysql://localhost:3306/hotel_db_dev?createDatabaseIfNotExist=true
+    url: jdbc:h2:mem:hotel
+    username: sa
+    password: password
+    #    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: mysql
+    open-in-view: false
+    show-sql: true
+    generate-ddl: false
+    #    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+event-service:
+  url : http://localhost:9798/
